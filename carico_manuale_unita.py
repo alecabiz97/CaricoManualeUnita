@@ -5,7 +5,7 @@ Created on Fri Jun 12 14:41:16 2020
 @author: Alessandro Cabizzosu
 """
 
-    
+#crea la lista delle unità di sangue    
 def creaListaCodici(scelta,n,cuo,numero_iniziale,anno,plasma):
     #presidio={1:'02',2:'02',3:'13',4:'13'}
     
@@ -19,7 +19,7 @@ def creaListaCodici(scelta,n,cuo,numero_iniziale,anno,plasma):
         lista.append(codice)
         unita += 1
     return lista
-
+#crea la lista dei pool Pfc
 def creaListaPfc(n_unità):
     
     lista=[]
