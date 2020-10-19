@@ -10,11 +10,11 @@ def creaListaCodici(scelta,n,cuo,numero_iniziale,anno,plasma):
     #presidio={1:'02',2:'02',3:'13',4:'13'}
     
     punto_prelievo={1:'00',2:'04',3:'03',4:'05'}
-    codice_lavorazione={1:5, 2:7}
+    codice_lavorazione={1:1, 2:2}
     unita=numero_iniziale
     lista=[]
     for i in range(n):
-        codice='K14' + '{:02d}'.format(cuo) + str(anno) + punto_prelievo[scelta] + \
+        codice='14' + '{:02d}'.format(cuo) + str(anno) + punto_prelievo[scelta] + \
         '{:04d}'.format(unita) + ',' + str(codice_lavorazione[plasma]) + '\n'
         lista.append(codice)
         unita += 1
@@ -24,7 +24,7 @@ def creaListaPfc(n_unità):
     
     lista=[]
     for i in range(n_unità):
-        codice='K16pool_' + str(i+1) + ',' + '21' + '\n' 
+        codice='16pool_' + str(i+1) + ',' + '21' + '\n'
         lista.append(codice)
     return lista
 
@@ -93,8 +93,8 @@ while(x == '1'):
     
 print("Le unità sono state inserite correttamente!")  
 
-f=open(path,'a') #per windows
-#f=open('/Users/mac/Desktop/OutputData/Ordini.txt','a') # per mac
+#f=open(path,'a') #per windows
+f=open('/Users/mac/Desktop/OutputData/Ordini.txt','a') # per mac
 f.writelines(lista)
 f.close()
 
